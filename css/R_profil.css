@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #facc15;
+}
+
+/* Section Wrapper */
+.section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Row & Column Layout */
+.row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 300px;
+}
+
+/* Image Column */
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Column */
+.section-label {
+  color: #facc15;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.2rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #facc15;
+  color: #1f2937;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e6b31e;
+  transform: translateY(-2px);
+}
+
+/* Learning Section */
+.learning-section {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+}
+
+.learning-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #3780FF;
+  text-align: center;
+  font-weight: bold;
+}
+
+.learning-title .highlight {
+  color: #facc15;
+}
+
+.row.learning-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.col.learning-item {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col.learning-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.learning-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.learning-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learning-item ul {
+  padding-left: 1.4rem;
+  list-style-type: none;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.learning-item ul li {
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.learning-item ul li::before {
+  content: "•";
+  color: #facc15;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.skills-section {
+  margin-left: 12%;
+  margin-right: 12%;
+  background-color: #ffffff;
+}
+.skills-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3780FF;
+}
+.skills-item-left {
+  /* Udah ada: */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 60%;
+  background-color: #ffffff;
+
+  /* Tambahan biar nempel kiri */
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.skills-item-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 60%;
+  background-color: #ffffff;
+  text-align: left;
+
+  /* Tambahan biar nempel kanan */
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+
+.wrapper {
+  position: relative;
+  width: 160px;
+  height: 110px;
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  /* border-radius: 8px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.orange {
+  background-color: orange;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.blue {
+  background-color: blue;
+  top: 10px;
+  left: 20px;
+  z-index: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+/* Achievement  section */
+.achievement-section {
+  padding: 4rem 5%;
+  background-color: #f9fafb;
+  text-align: center;
+  position: relative;
+}
+
+.achievement-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  width: 220px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.slide:hover {
+  transform: scale(1.03);
+}
+
+.slide img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.desc {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Navigasi panah */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.nav.left {
+  left: 0;
+  justify-content: center;
+  margin-left: 15%
+}
+
+.nav.right {
+  right: 0;
+  justify-content: center;
+  margin-right: 15%;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Quote Section */
+.Quote-section {
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+.quote-title {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.quote-text {
+  font-size: 1.2rem;
+  color: #4b5563;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wrapper {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wrapper {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .team-image {
+    max-width: 250px;
+  }
+
+  .learning-title {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+  .row.learning-grid {
+    padding: 0 1rem;
+  }
+
+  .col.learning-item {
+    max-width: 100%;
+  }
+  
+}
